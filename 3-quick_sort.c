@@ -22,24 +22,28 @@ void swap_integers(int *a, int *b)
  */
 int partition(int *array, int low, int high, size_t size)
 {
-	int pivot = array[high];
-	int i = low - 1;
-	int j;
-
-	for (j = low; j < high; j++)
+	int *pivot, top, down;
+	pivot = array + high;
+	
+	for (top = down = low; down < high; down++)
 	{
-		if (array[j] <= pivot)
+		if (array[down] < *pivot)
 		{
-			i++;
-			if (i != j)
-				swap_integers(&array[i], &array[j]);
+			if (top < down)
+			{
+				swap_integers(array + down, array + top);
+				print_array(array, size);
+			}
+			top++;
 		}
 	}
-	if ((i + 1) != high)
-		swap_integers(&array[i + 1], &array[high]);
 
-	print_array(array, size);
-	return (i + 1);
+	if (array[top] > *pivot)
+	{
+		swap_integers(array + top, pivot);
+		print_array(array, size);
+	}
+	return (top);
 }
 
 /**
