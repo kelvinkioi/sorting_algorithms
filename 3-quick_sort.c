@@ -5,7 +5,8 @@
  * @a: Pointer to the first integer
  * @b: Pointer to the second integer
  */
-void swap_integers(int *a, int *b) {
+void swap_integers(int *a, int *b)
+{
 	int temp = *a;
 	*a = *b;
 	*b = temp;
@@ -19,13 +20,16 @@ void swap_integers(int *a, int *b) {
  * @size: Size of the array
  * Return: Index of the partition
  */
-int partition(int *array, int low, int high, size_t size) {
+int partition(int *array, int low, int high, size_t size)
+{
 	int pivot = array[high];
 	int i = low - 1;
 	int j;
 
-	for (j = low; j < high; j++) {
-		if (array[j] <= pivot) {
+	for (j = low; j < high; j++)
+	{
+		if (array[j] <= pivot)
+		{
 			i++;
 			if (i != j)
 				swap_integers(&array[i], &array[j]);
@@ -45,8 +49,10 @@ int partition(int *array, int low, int high, size_t size) {
  * @high: Ending index of the partition
  * @size: Size of the array
  */
-void quick_sort_aid(int *array, int low, int high, size_t size) {
-	if (low < high) {
+void quick_sort_aid(int *array, int low, int high, size_t size)
+{
+	if (low < high)
+	{
 		int pi = partition(array, low, high, size);
 
 		quick_sort_aid(array, low, pi - 1, size);
@@ -59,7 +65,8 @@ void quick_sort_aid(int *array, int low, int high, size_t size) {
  * @array: Array to be sorted
  * @size: Size of the array
  */
-void quick_sort(int *array, size_t size) {
+void quick_sort(int *array, size_t size)
+{
 	if (array == NULL || size < 2)
 		return;
 
