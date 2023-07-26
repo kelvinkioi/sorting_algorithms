@@ -35,7 +35,7 @@ void bubble_sort(int *array, size_t size);
 void selection_sort(int *array, size_t size);
 void insertion_sort_list(listint_t **list);
 void quick_sort(int *array, size_t size);
-/*advanced */
+/* advanced */
 void swap(int *a, int *b);
 void insert_back(int *array, int gap, int pos);
 void shell_sort(int *array, size_t size);
@@ -45,4 +45,3 @@ void merge_sort_rr(int *array, int *tmp_buffer, size_t mbele, size_t nyuma);
 void radix_sort(int *array, size_t size);
 
 #endif /*SORT_H*/
-
