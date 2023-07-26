@@ -1,6 +1,6 @@
 #include "sort.h"
 /**
- * swap_node_ahead - swaps a node with the next node
+ * swap_node_mbele - swaps a node with the next node
  * @list: pointer to the head of the list
  * @tail: pointer to te tail of the list
  * @crrnt: pointer to the node to be swapped
@@ -27,8 +27,8 @@ void swap_node_mbele(listint_t **list, listint_t **tail, listint_t **crrnt)
 }
 
 /**
- * swap_node_behind - swaps the node behind the current node
- * 						with the current node
+ * swap_node_nyuma - swaps the node behind the current node
+ *						with the current node
  * @list: pointer to the head of the list
  * @tail: pointer to the tail of the list
  * @crrnt: pointer to the current node
@@ -55,7 +55,8 @@ void swap_node_nyuma(listint_t **list, listint_t **tail, listint_t **crrnt)
 }
 
 /**
- * cocktail_sort_list - sorts a doubly linked list of integers in ascending order
+ * cocktail_sort_list - sorts a doubly linked list of
+ *						integers in ascending order
  * @list: pointer to pointer to head of list
  */
 void cocktail_sort_list(listint_t **list)
